@@ -1,0 +1,11 @@
+.text-small {
+  font-size: 0.6em;
+}
+.review {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* Created with https://www.css-gradient.com */
+  background: #3f3d56;
+  background: -webkit-radial-gradient(top left, #3f3d56, #3599db);
+  background: -moz-radial-gradient(top left, #3f3d56, #3599db);
+  background: radial-gradient(to bottom right, #3f3d56, #3599db);
+}
