@@ -51,15 +51,36 @@ a<!DOCTYPE html>
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11125690929"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11125690929"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-	  gtag('config', 'AW-11125690929');
-	</script>
+      gtag("config", "AW-11125690929");
+    </script>
+    <!-- Event snippet for Website lead conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-11125690929/7h5gCJrNrpMYELGkkrkp",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>
@@ -114,7 +135,11 @@ a<!DOCTYPE html>
             </li> -->
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             <li>
-              <a class="getstarted scrollto" href="tel:+919965944012">
+              <a
+                class="getstarted scrollto"
+                href="tel:+919965944012"
+                onclick="gtag_report_conversion('tel:+919965944012')"
+              >
                 <i class="fa-solid fa-phone me-2"></i>Call Now
               </a>
             </li>
@@ -1339,7 +1364,14 @@ a<!DOCTYPE html>
 
                 <div>
                   <i class="ri-phone-line"></i>
-                  <p><a href="tel:+919965944012">+91 99659 44012</a></p>
+                  <p>
+                    <a
+                      href="tel:+919965944012"
+                      onclick="gtag_report_conversion('tel:+919965944012')"
+                    >
+                      +91 99659 44012
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
