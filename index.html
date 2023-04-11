@@ -171,7 +171,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               </p>
             </h2>
             <div data-aos="fade-up">
-              <a href="tel:+919965944012" class="btn-get-started scrollto">
+              <a
+                href="tel:+919965944012"
+                onclick="gtag_report_conversion('tel:+919965944012')"
+                class="btn-get-started scrollto"
+              >
                 <i class="fa-solid fa-phone"></i> Call Now
               </a>
             </div>
