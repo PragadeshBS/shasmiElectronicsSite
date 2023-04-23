@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://tvservice.netlify.app/sitemap.txt
